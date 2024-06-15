@@ -44,3 +44,10 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+      - name: Report status
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: https://webhooks.datocms.com/hxI0AMgYjW/deploy-results
+          method: "POST"
+          customHeaders: '{"Content-Type": "application/json"}'
+          data: '{ "status": "success" }'
