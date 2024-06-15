@@ -1,9 +1,11 @@
 <template>
-  <div class="w-full hero-gradient-center relative overflow-hidden">
-    <div class="hero-gradient container relative mx-auto p-14 min-h-[800px]">
+  <div class="w-full hero-gradient relative overflow-hidden">
+    <div class="bg-secondary container relative mx-auto p-14 min-h-[800px]">
+      <div class="absolute right-0 top-0 h-full bg-primary w-[450px]"></div>
+
       <Navbar :content="content" />
 
-      <div class="text-xl absolute top-1/2 -translate-y-1/2 ml-28">
+      <div class="text-xl absolute top-1/2 -translate-y-1/2 ml-20">
         <p class="text-primary font-medium mb-4">Hello Everyone.</p>
         <h1 class="text-7xl font-bold text-white flex flex-col gap-3">
           <span>I'M FARHAN</span>
@@ -21,7 +23,7 @@
 
       <img
         :src="content.mainSection.heroImage.url"
-        class="absolute right-[19%] bottom-0 w-[400px]"
+        class="absolute right-[280px] bottom-0 w-[400px]"
       />
     </div>
     <DottedBox class="absolute bottom-0 left-0" />
@@ -42,9 +44,6 @@ const props = defineProps({
 
 <style>
 .hero-gradient {
-  @apply bg-gradient-to-r from-secondary from-70% to-primary to-70%;
-}
-.hero-gradient-center {
   @apply bg-gradient-to-r from-secondary from-50% to-primary to-50%;
 }
 </style>
