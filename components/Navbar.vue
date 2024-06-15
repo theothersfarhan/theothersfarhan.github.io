@@ -3,9 +3,7 @@
     <p class="font-bold text-xl text-white">PORTFOLIO.</p>
 
     <div class="flex items-center">
-      <a href="#contact" class="text-secondary font-semibold mr-8"
-        >Contact Me</a
-      >
+      <a href="#contact" class="text-secondary font-bold mr-8">Contact Me</a>
 
       <div class="flex items-center gap-3">
         <!-- Social links -->
