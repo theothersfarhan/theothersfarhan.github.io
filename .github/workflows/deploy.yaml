@@ -36,7 +36,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - run: npm ci
-      - run: npm run generate
+      - run: DATO_CMS_ENV=${{secrets.DATO_CMS_ENV}} DATO_CMS_TOKEN=${{secrets.DATO_CMS_TOKEN}} npm run generate
 
       - name: deploy
         uses: peaceiris/actions-gh-pages@v4
