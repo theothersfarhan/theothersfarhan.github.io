@@ -2,10 +2,12 @@
   <div class="w-full hero-gradient relative overflow-hidden">
     <div class="bg-secondary container relative mx-auto p-14 min-h-[800px]">
       <div class="absolute right-0 top-0 h-full bg-primary w-[450px]"></div>
+      <Navbar
+        :content="content"
+        class="absolute top-0 z-10 w-full left-0 p-14"
+      />
 
-      <Navbar :content="content" />
-
-      <div class="text-xl absolute top-1/2 -translate-y-1/2 ml-20">
+      <div class="text-xl absolute top-1/2 -translate-y-1/2 ml-28">
         <p class="text-primary font-medium mb-4">Hello Everyone.</p>
         <h1 class="text-7xl font-bold text-white flex flex-col gap-3">
           <span>I'M FARHAN</span>
