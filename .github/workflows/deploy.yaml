@@ -1,12 +1,6 @@
 name: Deploy to Github Pages
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
   workflow_dispatch:
   repository_dispatch:
     types:
@@ -25,7 +19,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: "20"
+          node-version: "2000"
 
       - name: Cache dependencies
         uses: actions/cache@v3
@@ -44,10 +38,18 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-      - name: Report status
+      - name: Report success status
         uses: fjogeleit/http-request-action@v1
         with:
           url: https://webhooks.datocms.com/hxI0AMgYjW/deploy-results
           method: "POST"
           customHeaders: '{"Content-Type": "application/json"}'
           data: '{ "status": "success" }'
+      - name: Report failure status
+        if: failure()
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: https://webhooks.datocms.com/hxI0AMgYjW/deploy-results
+          method: "POST"
+          customHeaders: '{"Content-Type": "application/json"}'
+          data: '{ "status": "error" }'
