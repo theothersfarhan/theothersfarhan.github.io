@@ -36,10 +36,13 @@
         </a>
       </div>
 
-      <img
-        :src="content.mainSection.heroImage.url"
-        class="absolute lg:right-[220px] xl:right-[280px] bottom-0 lg:w-[300px] xl:w-[400px]"
-      />
+      <div class="absolute lg:right-[220px] xl:right-[280px] bottom-0">
+        <Image
+          preload
+          :src="content.mainSection.heroImage.url"
+          class="lg:w-[300px] xl:w-[400px]"
+        />
+      </div>
     </Container>
     <DottedBox class="absolute bottom-0 left-0 -ml-3 -mb-3" />
   </div>

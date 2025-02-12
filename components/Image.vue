@@ -137,7 +137,7 @@ if (props.preload) {
     });
   }
 
-  useHeadSafe({ link: linkTags });
+  useHead({ link: linkTags });
   loadBackground();
 }
 
