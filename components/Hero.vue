@@ -1,6 +1,6 @@
 <template>
   <div class="w-full hero-gradient relative overflow-hidden">
-    <Container class="bg-secondary p-14 min-h-[100vh] xl:min-h-[700px]">
+    <Container class="bg-secondary">
       <div
         class="absolute right-0 top-0 h-full bg-primary lg:w-[350px] xl:w-[450px]"
       ></div>
@@ -9,7 +9,7 @@
         class="absolute top-0 z-10 w-full left-0 p-14"
       />
 
-      <div class="absolute top-1/2 -translate-y-1/2 ml-28">
+      <div class="absolute top-1/2 -translate-y-1/2">
         <p class="text-primary font-medium mb-4 lg:text-sm xl:text-xl">
           Hello Everyone.
         </p>
@@ -19,8 +19,10 @@
           <span>I'M FARHAN</span>
           <span>ABBAS</span>
         </h1>
-        <div
+        <a
           class="bg-primary p-1 flex items-stretch max-w-max lg:mt-8 xl:mt-14"
+          target="_blank"
+          href="https://www.google.com"
         >
           <p
             class="flex items-center font-bold text-white bg-secondary lg:px-2 xl:px-4 py-2 lg:text-xs xl:text-base"
@@ -28,9 +30,10 @@
             {{ content.mainSection.designation }}
           </p>
           <div class="lg:p-2 xl:p-3 flex items-center">
+            <p class="text-secondary uppercase font-bold mr-2">hire me</p>
             <ArrowRightIcon class="text-secondary lg:w-5 xl:w-6" />
           </div>
-        </div>
+        </a>
       </div>
 
       <img

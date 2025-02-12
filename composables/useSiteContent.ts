@@ -6,6 +6,9 @@ export const useSiteContent = async (): Promise<Ref<SiteContent>> => {
     {
       mainSection {
         about
+        aboutImage {
+          url
+        }
         heroImage {
           url
         }
@@ -55,21 +58,27 @@ export const useSiteContent = async (): Promise<Ref<SiteContent>> => {
           order
         }
       }
-      client {
+      allClients {
         id
         name
         image {
           url
         }
         hide
+        designation
       }
-      happyClient {
+      allHappyClients {
         message
         client {
           id
+          image {
+            url
+          }
+          name
+          designation
         }
       }
-      brand {
+      allBrands {
         name
         hide
         logo {
@@ -120,6 +129,7 @@ export const useSiteContent = async (): Promise<Ref<SiteContent>> => {
 
   const { data, error } = await useGraphQlQuery({ query: QUERY });
   if (error.value) {
+    console.error(error.value);
     throw error.value.message;
   }
   return data as any as Ref<SiteContent>;

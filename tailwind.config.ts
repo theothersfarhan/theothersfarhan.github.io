@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import colors from "tailwindcss/colors";
 
 export default <Partial<Config>>{
   theme: {
@@ -7,6 +6,9 @@ export default <Partial<Config>>{
       colors: {
         primary: "#2ad882",
         secondary: "#1f242b",
+      },
+      screens: {
+        "3xl": "1700px",
       },
     },
   },

@@ -3,3 +3,19 @@ body {
     font-family: Montserrat;
   }
 }
+
+.h1c {
+  @apply text-[48px] font-bold;
+}
+
+.h2c {
+  @apply text-3xl font-bold;
+}
+
+p {
+  @apply text-xl font-light leading-8;
+}
+
+.center {
+  @apply flex justify-center items-center;
+}

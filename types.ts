@@ -1,5 +1,8 @@
 export interface MainSection {
   about: string;
+  aboutImage: {
+    url: string;
+  };
   heroImage: {
     url: string;
   };
@@ -66,13 +69,12 @@ export interface Client {
     url: string;
   };
   hide: boolean;
+  designation: string;
 }
 
 export interface HappyClient {
   message: string;
-  client: {
-    id: string;
-  };
+  client: Client;
 }
 
 export interface Brand {
@@ -139,9 +141,9 @@ export interface SiteContent {
   team: TeamMember[];
   footer: Footer;
   academicsSection: AcademicsSection;
-  client: Client[];
-  happyClient: HappyClient[];
-  brand: Brand[];
+  allClients: Client[];
+  allHappyClients: HappyClient[];
+  allBrands: Brand[];
   contactSection: ContactSection;
   directionSection: DirectionSection;
   howDoWeShootSection: HowDoWeShootSection;

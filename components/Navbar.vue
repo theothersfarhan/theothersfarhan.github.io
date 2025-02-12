@@ -1,6 +1,6 @@
 <template>
   <div class="w-full flex justify-between">
-    <p class="font-bold text-xl text-white">PORTFOLIO.</p>
+    <p class="font-bold text-xl text-white uppercase">Farhan.</p>
 
     <div class="flex items-center">
       <a href="#contact" class="text-secondary font-bold mr-8">Contact Me</a>
