@@ -5,7 +5,7 @@
         <div class="w-full flex items-center justify-center gap-20">
           <Image
             :style="{
-              boxShadow: '-20px 20px #2ad882',
+              boxShadow: '-20px 20px var(--color-primary)',
             }"
             :src="content.contactSection.image.url"
             class="w-[400px] aspect-square max-w-full"

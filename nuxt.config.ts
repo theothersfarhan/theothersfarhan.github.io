@@ -1,6 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/google-fonts", "@nuxtjs/tailwindcss"],
+  modules: [
+    "@nuxtjs/google-fonts",
+    "@nuxtjs/tailwindcss",
+    "@hypernym/nuxt-gsap",
+  ],
+  gsap: {
+    extraPlugins: {
+      scrollTrigger: true,
+    },
+  },
   css: ["~/assets/style/main.scss"],
   runtimeConfig: {
     public: {

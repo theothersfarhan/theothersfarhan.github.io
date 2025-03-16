@@ -7,7 +7,7 @@
             :src="content.skillsSection.image.url"
             class="w-full aspect-[3.3/4] lg:w-[400px]"
             :style="{
-              boxShadow: '40px 40px #2ad882',
+              boxShadow: '40px 40px var(--color-primary)',
             }"
           />
         </div>

@@ -7,7 +7,7 @@
             :src="content.mainSection.aboutImage.url"
             class="lg:w-[400px] object-cover object-center aspect-[3.3/4] w-full"
             :style="{
-              boxShadow: '-20px 20px #2ad882',
+              boxShadow: '-20px 20px var(--color-primary)',
             }"
           />
         </div>
